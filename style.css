@@ -1,0 +1,386 @@
+@import url('https://fonts.googleapis.com/css2?family=Titillium+Web:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Noto+Nastaliq+Urdu:wght@400;500;600;700&display=swap');
+
+@import url(//db.onlinewebfonts.com/c/58dac32d63e934bab07542927c7e9941?family=Andalus);
+
+
+@font-face {
+  font-family: "AlQalam Taj Nastaleeq";
+  src: url('./font/AlQalam-Taj-Nastaleeq-Regular.ttf.eot');
+  src: url('./font/AlQalam-Taj-Nastaleeq-Regular.ttf.eot') format('embedded-opentype'),
+
+    url('./font/AlQalam-Taj-Nastaleeq-Regular.ttf.woff') format('woff'),
+
+}
+
+* {
+
+  font-family: 'Titillium Web', sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  color: black;
+  border: none;
+  /* outline:1px solid red; */
+
+
+
+}
+
+body {
+  overflow-x: hidden;
+  scroll-behavior:smooth;
+}
+
+
+nav {
+  position: fixed;
+  z-index: 2;
+  display: flex;
+  height: 70px;
+  width: 100%;
+  /* background:rgba(0, 0, 0, 0.555); */
+  /* backdrop-filter: blur(6px); */
+  align-items: center;
+  justify-content: space-between;
+  padding: 5px 50px 0 100px;
+  flex-wrap: wrap;
+}
+
+.navbar.sticky {
+  background: rgba(0, 0, 0, 0.877);
+  backdrop-filter: blur(2px);
+  box-shadow: 0px 3px 5px 0px rgba(0, 0, 0, 0.1);
+}
+
+nav .logo {
+  font-family: "Andalus";
+  color: white;
+  font-size: 2rem;
+}
+
+nav ul {
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+}
+
+nav ul li a.active,
+nav ul li a:hover {
+  background: none;
+  color: #4e5cf9;
+}
+
+nav ul li {
+  margin: 0 5px;
+}
+
+nav ul li a {
+  color: white;
+  text-decoration: none;
+  font-size: 18px;
+  font-weight: 600;
+  padding: 8px 15px;
+  border-radius: 5px;
+  letter-spacing: 1px;
+  transition: all 0.3s ease;
+}
+
+nav .menu-btn i {
+  color: #fff;
+  font-size: 22px;
+  cursor: pointer;
+  display: none;
+}
+
+input[type="checkbox"] {
+  display: none;
+}
+
+/* ===========================================seacrh ==============================================*/
+#small_container {
+  font-family: 'AlQalam Taj Nastaleeq';
+  height: 40vh;
+  width: 100vw;
+  background-image: linear-gradient(180deg, rgba(0, 0, 0, 0.678), rgba(0, 0, 0, 0.377)), url(Images/bgc.jpg);
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+
+
+.input-box {
+  position: relative;
+  height: 40px;
+  max-width: 900px;
+  width: 60%;
+  background: #fff;
+  backdrop-filter: blur(3px);
+  margin: 0 20px;
+  border-radius: 100vmax;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+}
+
+.input-box i,
+.input-box .button {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.input-box i {
+  right: 20px;
+  font-size: 20px;
+  color: #707070;
+}
+
+.input-box input {
+
+  text-align: end;
+  font-family: 'AlQalam Taj Nastaleeq';
+  height: 100%;
+  width: 100%;
+  outline: none;
+  font-size: 14px;
+  font-weight: 600;
+  border: none;
+  padding: 0 60px 0 155px;
+  background-color: transparent;
+
+}
+
+
+
+
+
+
+
+
+/* ===========================================Books Main==============================================*/
+h2,
+h3,
+h4,
+h5 {
+  font-family: 'AlQalam Taj Nastaleeq';
+}
+
+.bold_info {
+  font-family: 'AlQalam Taj Nastaleeq';
+  width: 20%;
+  display: inline-block;
+  text-align: right;
+  font-weight: bold;
+}
+
+h3 {
+  display: inline-block;
+}
+
+.book_details {
+  text-align: center;
+  padding: 0px .9rem;
+}
+
+#books_section {
+  height: auto;
+  width: 100vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1.5rem;
+  font-family: 'AlQalam Taj Nastaleeq';
+}
+
+.books_list {
+  background: rgb(255, 255, 255);
+  list-style: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+}
+
+
+.book_card {
+  padding: .4rem .2rem;
+  row-gap: 1rem;
+  height: auto;
+  width: 220px;
+  /* border: 3px solid black; */
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: column;
+  transition: all 0.2s ease;
+  box-shadow: rgba(0, 0, 0, 0.09) 0px 3px 12px;
+  position: relative;
+}
+
+.book_card::before {
+  position: absolute;
+  content: '';
+  width: 30%;
+  border-radius: 8px;
+  align-self: center;
+  height: 4px;
+  background: #0000001f;
+  top: 0;
+transition: all 0.2s ease;
+}
+
+.book_card:hover::before {
+  width: 40%;
+}
+
+.book_card:hover {
+  transform: translateY(-3px);
+}
+
+.img_container {
+  width: 200px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+
+}
+
+.img_container img {
+  max-width: 100%;
+  border-radius: 4px;
+
+}
+
+.author {
+  text-align: right;
+}
+
+.language {
+  text-align: center;
+  display: block;
+}
+
+.download_button {
+  width: 70%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.download {
+  border: 2px solid black;
+  border-radius: 100vmax;
+  font-size: 14px;
+  padding: .2rem;
+  width: 100%;
+  text-align: center;
+  transition: all 0.2s ease;
+}
+
+.download:hover {
+  background: #000;
+  color: white;
+}
+
+/* ====================================Responsive Navbar==================================== */
+
+
+
+@media (max-width: 1000px) {
+  nav {
+    padding: 0 40px 0 50px;
+  }
+}
+
+@media (max-width: 920px) {
+  nav .menu-btn i {
+    display: block;
+  }
+
+  #click:checked~.menu-btn i:before {
+    content: "\f00d";
+  }
+
+  nav ul {
+    position: fixed;
+    top: 80px;
+    left: -100%;
+    background: #111;
+    height: 100vh;
+    width: 100%;
+    text-align: center;
+    display: block;
+    transition: all 0.3s ease;
+  }
+
+  #click:checked~ul {
+    left: 0;
+  }
+
+  nav ul li {
+    width: 100%;
+    margin: 40px 0;
+  }
+
+  nav ul li a {
+    width: 100%;
+    margin-left: -100%;
+    display: block;
+    font-size: 20px;
+    transition: 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  }
+
+  #click:checked~ul li a {
+    margin-left: 0px;
+  }
+
+  nav ul li a.active,
+  nav ul li a:hover {
+    background: none;
+    color: #4e5cf9;
+  }
+}
+
+
+
+
+
+/* ====================================Responsive search============================*/
+@media screen and (max-width: 500px) {
+
+
+  .input-box {
+    height: 35px;
+    margin: 0 8px;
+    font-size: 6px;
+  }
+
+  .input-box input {
+    font-size: 12px;
+  }
+
+  .input-box i {
+    left: 12px;
+    font-size: 17px;
+  }
+
+  .input-box input {
+    padding: 0 112px 0 50px;
+  }
+
+  .input-box .button {
+    width: 4rem;
+    right: 12px;
+    font-size: 10px;
+    padding: 3px 13px;
+  }
+}
