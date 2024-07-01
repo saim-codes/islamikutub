@@ -20,3 +20,23 @@ function search_books() {
 	}
 }
 
+
+document.addEventListener("DOMContentLoaded", function() {
+    window.addEventListener("load", function() {
+        const loadingScreen = document.getElementById('loading-screen');
+        const content = document.getElementById('content');
+        
+        // Duration for which the loading screen is displayed (in milliseconds)
+        const loadingDuration = 5000; // 5 seconds
+
+        // Set a timeout to hide the loading screen after the specified duration
+        setTimeout(function() {
+            loadingScreen.style.display = 'none';
+            content.style.display = 'block';
+        }, loadingDuration);
+    });
+});
+
+
+
+
